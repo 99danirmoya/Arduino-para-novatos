@@ -119,6 +119,8 @@ En esta sección iré escribiendo programas para hacer que funcionen diversos pr
   <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-21_180848.png" width="500"  style="margin: 10px;"/>
   
   <em>Esquema del circuito para el programa “Hola mundo”</em>
+
+  [![Static Badge](https://img.shields.io/badge/TINKER_THIS!-8A2BE2?logo=autodesk)](https://www.tinkercad.com/things/74IppFMZakz-hola-mundo-)
 </div>
 <br/>
 
@@ -191,6 +193,8 @@ En este programa se usa un sensor de temperatura TMP36 en el que, en tinkerCAD, 
   <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-22_184453.png" width="500"  style="margin: 10px;"/>
   
   <em>Circuito del sensor de temperatura</em>
+
+  [![Static Badge](https://img.shields.io/badge/TINKER_THIS!-8A2BE2?logo=autodesk)](https://www.tinkercad.com/things/3377NaW4yFa-sensor-de-temperatura)
 </div>
 <br/>
 
@@ -253,6 +257,8 @@ Función para que el usuario elija un color de LED y su frecuencia de parpadeo:
   <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-30_180817.png" width="500"  style="margin: 10px;"/>
   
   <em>Circuito de la secuencia de LEDs</em>
+
+  [![Static Badge](https://img.shields.io/badge/TINKER_THIS!-8A2BE2?logo=autodesk)](https://www.tinkercad.com/things/lhtflCAnRX8-secuencia-de-leds)
 </div>
 <br/>
 
@@ -300,6 +306,8 @@ Sensor de humedad que, por encima del 60%, nos notifica con el ‘BUILTIN_LED’
   <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-30_180612.png" width="500"  style="margin: 10px;"/>
   
   <em>Circuito del sensor de humedad</em>
+  
+  [![Static Badge](https://img.shields.io/badge/TINKER_THIS!-8A2BE2?logo=autodesk)](https://www.tinkercad.com/things/eUPOyGg93Io-sensor-humedad)
 </div>
 <br/>
 
@@ -358,6 +366,9 @@ Creo un algoritmo para variar de forma continua de menos a más, y viceversa, el
   <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-23_190211.png" width="500"  style="margin: 10px;"/>
   
   <em>Circuito PWM</em>
+
+  [![Static Badge](https://img.shields.io/badge/TINKER_THIS!-8A2BE2?logo=autodesk)](https://www.tinkercad.com/things/auXn0kpD2nH-circuito-pwm)
+  
 </div>
 <br/>
 

@@ -127,7 +127,7 @@ En esta sección iré escribiendo programas para hacer que funcionen diversos pr
 <table>
 <tr>
 <th> Digital </th>
-<th> Analogic </th>
+<th> Analógico </th>
 </tr>
 <tr>
 <td>

@@ -29,7 +29,7 @@ En este apartado me centraré en describir los aspectos más básicos del hardwa
 
 </div>
 
-<img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-21_104445.png" align="right" width="500px"/>
+<img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-21_104445.png" align="right" width="400px"/>
 
 - El LED “L” está conectado al pin 13, por lo que cada vez que se ponga a “high”, “L” se encenderá
 

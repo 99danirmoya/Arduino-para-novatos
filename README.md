@@ -683,6 +683,7 @@ void loop(){
 ```
 
 <br clear="right"/>
+
 ___
 
 ## `BREAK`, `CONTINUE` Y `RETURN`
@@ -803,5 +804,157 @@ void loop(){
 	
 }
 ```
+
+___
+
+## ARRAYS
+
+Listas de variables.
+
+```c++
+// Declaración de variables
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	Serial.begin(115200);                                       // Inicializo el serial y sus baudios
+	int mi_array[5] = {1 ,3, 5, 8, 2};
+	Serial.println(mi_array[2]);                                // Ésto imprime 5
+	mi_array[3] = 101;                                          // Ésto actualiza el valor de la cuarta posición a un 101
+	int mi_variable = mi_array[0] + mi_array[1] + mi_array[2];
+	Serial.println(mi_variable);                                // Imprime la suma de 1 + 3 + 5 = 9
+	Serial.println();
+	
+	for(int i = 0; i < 5; i++){
+		Serial.println(mi_array[i]);
+	}
+	Serial.println();
+
+	for(int i = 0; i < 5; i++){
+		mi_array[i] = mi_array[i] + 1000;                         // A cada elemento del array le sumo 1000
+		Serial.println(mi_array[i]);
+	}
+	Serial.println();
+
+	int sum = 0;
+	for (int i = 0; i < 5; i++){
+		sum = sum + mi_array[i];
+	}
+	Serial.println(sum);
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+	
+}
+```
+
+___
+
+## STRINGS
+
+Secuencias de caracteres. Son a los caracteres lo que son los arrays a los números. Prácticamente comparten la sintaxis.
+
+```c++
+// Declaración de variables
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	Serial.begin(115200);                                       // Inicializo el serial y sus baudios
+	char string_1[7] = {'d' ,'a', 'n', 'i', 'e', 'l'};          // Aunque mi nombre tenga 6 caracteres, debo crear la string con un espacio extra
+	Serial.println(string_1);
+	
+	char string_2[7] = {'d' ,'a', 'n', 'i', 'e', 'l', '\0'};    // '\0' es el caracter "null" y se puede dejar explícito también
+	Serial.println(string_2);
+	
+	char string_3[] = "daniel";                                 // Sin indicar la dimensión, el compilador es inteligente y acomoda el tamaño a 7 automáticamente
+	Serial.println(string_3);
+
+	char string_4[7] = "daniel";
+	Serial.println(string_4);
+	
+	char string_5[14] = "daniel";                               // No hay problema en que cree strings con dimensión superior a la palabra con la que lo inicializo, pero nunca puedo hacerlo más pequeño porque cortará la palabra
+	Serial.println(string_5);
+	
+	String string_6 = "daniel";
+	Serial.println(string_6);
+	Serial.println(string_6.charAt(0));                         // Si defino una variable de tipo 'String', puedo contar con las funciones, como'.charAt()', que me devuelve el caracter en el índice puesto en el paréntesis
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+	
+}
+```
+
+___
+
+## FUNCIONES
+
+Bloques de código a los que les asigno una serie de propiedades que podré llamar en otros lugares del código. Tienen la morfología ‘void Nombre(){}’. CUIDADO: dependiendo del entorno de trabajo, se deben declarar las funciones propias antes de, mínimo, ‘loop()’ puesto que ésta actúa como la ‘main()’.
+
+### ‘void Mi_funcion()’
+
+Las funciones de tipo “void” no devuelven nada, simplemente hacen una serie de acciones, pero sin devolver una variable.
+
+```c++
+// Declaración de variables
+
+// Declaración de funciones
+void Parpadeo_LED(){
+	digitalWrite(LED_BUILTIN, HIGH);            // Encender el LED
+	Serial.println("LED encendido");        // Notificación en el serial
+	delay(1000);                     // Durante 1 segundo
+	digitalWrite(LED_BUILTIN, LOW);             // Apagar el LED
+	Serial.println("LED apagado");
+	delay(1000);                     // Durante 1 segundo... Y vuelta a empezar
+}
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	Serial.begin(115200);                   // Inicializo el serial y sus baudios
+	pinMode(LED_BUILTIN, OUTPUT);              // Establecer 'LED_BUILTIN' como salida
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+	Parpadeo_LED();
+}
+```
+
+### ‘int Mi_funcion()’
+
+Son funciones que devuelve una variable ‘int’
+
+```c++
+// Declaración de variables
+
+// Declaración de funciones
+int Suma(int num1, int num2, int num3){
+	int resultado = num1 + num2 + num3;
+	return resultado;                          // Aunque podría poner directamente return num1 + num2 + num3
+}
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	Serial.begin(115200);                      // Inicializo el serial y sus baudios
+	int suma_1 = Suma(4, 5, 10);
+	Serial.println(suma_1);
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+	
+}
+```
+
+### ‘bool Mi_Funcion()’
+
+Devuelve un ‘true’ o ‘false’. Esta función se explica en PROGRAMAS → SENSOR HUMEDAD
+
+___
+
+## LIBRERÍAS
+
+Son llamadas a otros ficheros que contienen una serie de funciones necesarias para sensores específicos.
 
 </div>

@@ -413,4 +413,276 @@ void loop(){
 
 ___
 
+## CALIFICADORES
+
+Son modificadores de variables que son inmutables en las ejecuciones del programa.
+
+```c++
+// Declaración de variables
+const int variable_constante = 5;
+int variable_global = 5;                  // Variable gloabal 5 en todas las funciones de mi programa
+int valor_delay = 1000;                   // Creo una variable 'int' que meteré en la función 'delay()'
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	int variable_local = 10;
+	variable_constante = variable_constante + 1; // ERROR, NO PUEDO SOBREESCRIBIR UN 'const'
+	Serial.begin(115200);                   // Inicializo el serial y sus baudios
+	Serial.println(variable_local);         // Imprime "10"
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+	int variable_local = 15;
+	variable_local = variable_global + variable_constante; // 'variable_local' ahora vale 5 + 5 = 10
+	Serial.println(variable_local);         // Imprime "10" y sin sobreescribir 'variable_local' del 'setup()', ya que son locales y cada una es diferente
+	delay(valor_delay);                     // Durante 1 segundo
+}
+```
+
+___
+
+## FUNCIÓN `#define`
+
+Permite declarar constantes antes de que se compile el programa, muy similar a usar el método ‘const’, pero sin ocupar espacio de programa.
+
+```c++
+// Declaración de variables
+#define pi 3.1416
+
+int variable_global = 5;                  // Variable gloabal 5 en todas las funciones de mi programa
+int valor_delay = 1000;                   // Creo una variable 'int' que meteré en la función 'delay()'
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	Serial.begin(115200);                   // Inicializo el serial y sus baudios
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+	int radio = 10;
+	float area_circulo = radio * radio * pi; // Declaro y asigno un valor a 'area_circulo'
+	Serial.println(area_circulo);            // Imprime "314.16"
+	delay(valor_delay);                      // Durante 1 segundo
+}
+```
+
+___
+
+## CALIFICADOR `static`
+
+Son una _tag_ que permite a una variable de cualquier tipo inicializarse en ‘loop()’ a un valor inicial y, luego, sobreescribirse al valor anterior. Como inicializarla de forma global, pero ya dentro de una función de forma local.
+
+```c++
+// Declaración de variables
+int variable_global = 5;                     // Variable gloabal 5 en todas las funciones de mi programa
+int valor_delay = 1000;                      // Creo una variable 'int' que meteré en la función 'delay()'
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	Serial.begin(115200);                      // Inicializo el serial y sus baudios
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+	int x = 0;
+	static int y = 0;                          // 'static' inicializa una variable al valor asignado en la primera ejecución del 'loop()' 
+	x++;
+	y++;
+	Serial.println(x);                         // Ésto imprime '1' contínuamente porque inicialicé la variable a 0 en el 'loop()', por lo que siempre está 0, 1, 0, 1, ...
+	Serial.println(y);
+	delay(valor_delay);                        // Durante 1 segundo
+}
+```
+
+___
+
+## OPERADORES
+
+### COMPARATIVOS
+
+`<`, `>`, `<=`, `>=`, `==`, `!=`
+
+### LÓGICOS
+
+`&&`, `||`, `!`. Debo recordar la importancia con el concepto booleano que tienen.
+
+```c++
+// Declaración de variables
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	Serial.begin(115200);                      // Inicializo el serial y sus baudios
+	Serial.println("Tabla de verdad '&&'");
+	Serial.print("'true' y 'true': ");
+	Serial.println(true && true);
+	Serial.print("'true' y 'false': ");
+	Serial.println(true && false);
+	Serial.print("'false' y 'true': ");
+	Serial.println(false && true);
+	Serial.print("'false' y 'false': ");
+	Serial.println(false && false);
+
+	Serial.println();
+	Serial.println();
+	Serial.println();
+
+	Serial.println("Tabla de verdad '||'");
+	Serial.print("'true' o 'true': ");
+	Serial.println(true || true);
+	Serial.print("'true' o 'false': ");
+	Serial.println(true || false);
+	Serial.print("'false' o 'true': ");
+	Serial.println(false || true);
+	Serial.print("'false' o 'false': ");
+	Serial.println(false || false);
+
+	Serial.println();
+	Serial.println();
+	Serial.println();
+
+	Serial.println("Tabla de verdad '!'");
+	Serial.print("'!true': ");
+	Serial.println(!true);
+	Serial.print("'!false': ");
+	Serial.println(!false);
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+
+}
+```
+
+___
+
+## SENTENCIAS CONDICIONALES
+
+`if`, `else if` y `else`.
+
+```c++
+#define num2 3.2
+
+// Declaración de variables
+bool mi_booleana = false;
+int num1 = 4;
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	Serial.begin(115200);                      // Inicializo el serial y sus baudios
+
+	if(true){
+		Serial.println("Ésta línea se imprime si está a 'true'");
+	}
+
+	if(false){
+		Serial.println("Ésta línea no se imprime, está a 'false'");
+	}	
+
+	if(10>3 && 3<5){
+		Serial.println("Las mates funcionan")
+		if(true);
+			Serial.println("Esta línea pertenece a un 'if' anidado");
+		}
+	}
+	
+	if(mi_booleana=true){
+		Serial.println("Mi booleana está a 'true'");
+  }
+
+	if(num1 > num2 && mi_booleana){
+		Serial.println("Número 1 es mayor que número 2 y booleana está a 'true'");
+	}
+	else if(num1 < num2 && !mi_booleana){
+		Serial.println("Número 2 es mayor que número 1 y booleana está a 'false'");
+	}
+	else{
+		Serial.println("Me pillas");
+	}
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+
+}
+```
+
+___
+
+## BUCLES Y BUCLES ANIDADOS
+
+Como en cualquier otro lenguaje de programación:
+
+### BUCLE `while`
+
+```c++
+// Declaración de variables
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	Serial.begin(115200);
+	int multiplo = 1;
+	while(multiplo <= 10){         // 10 iteraciones
+		Serial.println(multiplo*5);  // Empezando en 1, multiplica por 5 en cada iteración y guárdalo en la misma variable
+		Serial.println(multiplo);    // Múltiplo es un número que, a cada iteración, va así: 1, 2, 3, 4, ..., 10
+		multiplo++;                  // Sube el valor de iteraciones
+	}
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+	
+}
+```
+
+### BUCLE `for`
+
+```c++
+// Declaración de variables
+
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	Serial.begin(115200);
+	for(int i = 0; i < 5; i++){       // Éste bucle se encarga de repetir una acción 5 veces
+		for(int j = 0; j<=i; j++){      // Éste bucle anidado se encarga de imprimir y sumar, tras cada iteración del bucle, un '+' más por línea
+			Serial.print("*");
+		}
+	Serial.println();                 // Espaciamos tras cada línea de '*'
+	}
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+	
+}
+```
+
+### BUCLE `do... while`
+
+<img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-22_213407.png" align="right" width="600px"/>
+
+```c++
+// Declaración de variables
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	int multiplo = 1;
+	Serial.begin(115200);
+	do{
+		Serial.println(multiplo*2);
+		multiplo++;
+	}
+	while(multiplo <= 10);
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+	
+}
+```
+
+<br clear="right"/>
+___
+
 </div>

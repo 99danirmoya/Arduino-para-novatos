@@ -17,6 +17,8 @@ En esta página tomaré apuntes extraidos del curso “Arduino Course for Beginn
 
 </div>
 
+___
+
 <div align="justify">
 
 ## CONCEPTOS BÁSICOS
@@ -25,12 +27,7 @@ En este apartado me centraré en describir los aspectos más básicos del hardwa
 
 </div>
 
-<div align="center">
-  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-21_104445.png" width="600"  style="margin: 10px;"/>
-</div>
-<br/>
-
-<div align="justify">
+<img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-21_104445.png" align="right" width="500px"/>
 
 - El LED “L” está conectado al pin 13, por lo que cada vez que se ponga a “high”, “L” se encenderá
 
@@ -42,11 +39,51 @@ En este apartado me centraré en describir los aspectos más básicos del hardwa
 
 - Botón de reset que reinicia el código sin limpiar la memoria
 
-</div>
-
-## PROGRAMAS
+<br clear="right"/>
 
 <div align="justify">
+
+___
+
+## CONCEPTOS TÉCNICOS
+
+En este apartado mostraré información técnica del microcontrolador [Arduino UNO](https://docs.arduino.cc/hardware/make-your-uno-kit), especialmente aspectos de la circuitería vistos en el grado.
+
+### ESQUEMATICO
+
+<div align="center">
+  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-27_182139.png" width="900"  style="margin: 10px;"/>
+</div>
+<br/>
+
+### PCB
+
+<div align="center">
+  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-27_182120.png" width="900"  style="margin: 10px;"/>
+</div>
+<br/>
+
+### MODELO 3D
+
+<div align="center">
+  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-27_182103.png" width="900"  style="margin: 10px;"/>
+</div>
+<br/>
+
+### PINOUT
+
+<div align="center">
+  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-27_182305.png" width="900"  style="margin: 10px;"/>
+</div>
+<br/>
+
+</div>
+
+___
+
+<div align="justify">
+
+## PROGRAMAS
 
 En esta sección iré escribiendo programas para hacer que funcionen diversos proyectos con variedad de placas Arduino y componentes. Aplicaré los conocimientos de los apartados que iré desarrollando en los siguientes puntos.
 
@@ -55,7 +92,7 @@ En esta sección iré escribiendo programas para hacer que funcionen diversos pr
 <table>
 <tr>
 <th> Digital </th>
-<th> Anaogic </th>
+<th> Analogic </th>
 </tr>
 <tr>
 <td>

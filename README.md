@@ -3,6 +3,8 @@
 </div>
 <br/>
 
+<img src="https://notion-emojis.s3-us-west-2.amazonaws.com/prod/svg-twitter/1f4a1.svg" width="50"/>
+
 <div align="justify">
 
 # Arduino Course for Beginners

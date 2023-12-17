@@ -113,7 +113,14 @@ ___
 
 En esta sección iré escribiendo programas para hacer que funcionen diversos proyectos con variedad de placas Arduino y componentes. Aplicaré los conocimientos de los apartados que iré desarrollando en los siguientes puntos.
 
-### MI PRIMER PROGRAMA
+### MI PRIMER PROGRAMA, `HOLA MUNDO`
+
+<div align="center">
+  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-21_180848.png" width="500"  style="margin: 10px;"/>
+  
+  <em>Esquema del circuito para el programa “Hola mundo”</em>
+</div>
+<br/>
 
 <table>
 <tr>
@@ -177,18 +184,15 @@ void loop(){
 </tr>
 </table>
 
-<div align="center">
-  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-21_180848.png" width="400"  style="margin: 10px;"/>
-	
-  <em>Esquema del circuito para el programa “Hola mundo”</em>
-</div>
-<br/>
-
 ### SENSOR TEMPERATURA
 
 En este programa se usa un sensor de temperatura TMP36 en el que, en tinkerCAD, yo le digo la temperatura que hace y me lo notifica por medio de unos LEDs configurados como salidas:
-
-<img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-22_184453.png" align="right" width="400px"/>
+<div align="center">
+  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-22_184453.png" width="500"  style="margin: 10px;"/>
+  
+  <em>Circuito del sensor de temperatura</em>
+</div>
+<br/>
 
 ```c++
 // Declaración de variables
@@ -241,13 +245,16 @@ void loop(){
 }
 ```
 
-<br clear="right"/>
-
 ### FUNCIONES LED
 
 Función para que el usuario elija un color de LED y su frecuencia de parpadeo:
 
-<img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-30_180817.png" align="right" width="400px"/>
+<div align="center">
+  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-30_180817.png" width="500"  style="margin: 10px;"/>
+  
+  <em>Circuito de la secuencia de LEDs</em>
+</div>
+<br/>
 
 ```c++
 // Declaración de variables
@@ -285,13 +292,16 @@ void loop(){
 }
 ```
 
-<br clear="right"/>
-
 ### SENSOR DE HUMEDAD
 
 Sensor de humedad que, por encima del 60%, nos notifica con el ‘BUILTIN_LED’ parpadeando:
 
-<img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-30_180612.png" align="right" width="400px"/>
+<div align="center">
+  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-30_180612.png" width="500"  style="margin: 10px;"/>
+  
+  <em>Circuito del sensor de humedad</em>
+</div>
+<br/>
 
 ```c++
 // Declaración de variables
@@ -340,13 +350,16 @@ void loop(){
 }
 ```
 
-<br clear="right"/>
-
 ### PWM
 
 Creo un algoritmo para variar de forma continua de menos a más, y viceversa, el duty cycle de la señal PWM generada en un pin digital. Para ello, uso la función ‘analogWrite(pin, valor)’ y bucles ‘for’. Además, controlo el brillo de forma analógica también de un LED:
 
-<img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-23_190211.png" align="right" width="400px"/>
+<div align="center">
+  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-23_190211.png" width="500"  style="margin: 10px;"/>
+  
+  <em>Circuito PWM</em>
+</div>
+<br/>
 
 ```c++
 // Declaración de variables
@@ -383,8 +396,6 @@ void loop(){
   	Serial.println(analogRead(pin_analog));
 }
 ```
-
-<br clear="right"/>
 
 ___
 

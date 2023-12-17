@@ -1,8 +1,7 @@
-<div align="centre">
-	
-https://images.unsplash.com/photo-1603732551658-5fabbafa84eb?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=3600
-
+<div align="center">
+  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/photo-1603732551658-5fabbafa84eb.jpg"/>
 </div>
+<br/>
 
 <div align="justify">
 

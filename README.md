@@ -49,7 +49,7 @@ ___
 
 ## CONCEPTOS TÉCNICOS
 
-En este apartado mostraré información técnica del microcontrolador [Arduino UNO](https://docs.arduino.cc/hardware/make-your-uno-kit), especialmente aspectos de la circuitería vistos en el grado.
+En este apartado mostraré la [información técnica del microcontrolador Arduino UNO](https://docs.arduino.cc/hardware/make-your-uno-kit), especialmente aspectos de la circuitería vistos en el grado.
 
 ### ESQUEMATICO
 

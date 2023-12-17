@@ -962,7 +962,7 @@ void loop(){
 
 ### ‘bool Mi_Funcion()’
 
-Devuelve un ‘true’ o ‘false’. Esta función se explica en PROGRAMAS → SENSOR HUMEDAD
+Devuelve un ‘true’ o ‘false’. Esta función se explica en [PROGRAMAS → SENSOR HUMEDAD](https://github.com/medialablpwan/arduinoparanovatos?tab=readme-ov-file#sensor-de-humedad)
 
 ___
 

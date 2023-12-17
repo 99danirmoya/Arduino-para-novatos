@@ -9,7 +9,7 @@
 
 # Arduino Course for Beginners
 
-En esta página tomaré apuntes extraidos del curso “Arduino Course for Beginners”.
+En esta página tomaré apuntes extraidos del curso “Arduino Course for Beginners”. Para facilitar la navegación por el contenido, es recomendable hacer uso del icono de índice que hay a la derecha justo encima del banner.
 
 </div>
 

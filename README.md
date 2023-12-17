@@ -914,9 +914,9 @@ ___
 
 ## FUNCIONES
 
-Bloques de código a los que les asigno una serie de propiedades que podré llamar en otros lugares del código. Tienen la morfología ‘void Nombre(){}’. CUIDADO: dependiendo del entorno de trabajo, se deben declarar las funciones propias antes de, mínimo, ‘loop()’ puesto que ésta actúa como la ‘main()’.
+Bloques de código a los que les asigno una serie de propiedades que podré llamar en otros lugares del código. Tienen la morfología `void Nombre(){}`. CUIDADO: dependiendo del entorno de trabajo, se deben declarar las funciones propias antes de, mínimo, `loop()` puesto que ésta actúa como la `main()`.
 
-### ‘void Mi_funcion()’
+### `void Mi_funcion()`
 
 Las funciones de tipo “void” no devuelven nada, simplemente hacen una serie de acciones, pero sin devolver una variable.
 
@@ -945,7 +945,7 @@ void loop(){
 }
 ```
 
-### ‘int Mi_funcion()’
+### `int Mi_funcion()`
 
 Son funciones que devuelve una variable ‘int’
 
@@ -971,7 +971,7 @@ void loop(){
 }
 ```
 
-### ‘bool Mi_Funcion()’
+### `bool Mi_Funcion()`
 
 Devuelve un ‘true’ o ‘false’. Esta función se explica en [PROGRAMAS → SENSOR HUMEDAD](https://github.com/medialablpwan/arduinoparanovatos?tab=readme-ov-file#sensor-de-humedad)
 

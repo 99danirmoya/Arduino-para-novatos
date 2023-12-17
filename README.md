@@ -699,9 +699,9 @@ void loop(){
 
 ___
 
-## `BREAK`, `CONTINUE` Y `RETURN`
+## `break`, `continue` Y `return`
 
-### `BREAK`
+### `break`
 
 Rompe un bucle cuando se cumple la condición que le imponga. Muy útil para decir cuando un bucle de tipo ‘while(1)’ o ‘while(true)’ deben acabar.
 
@@ -729,7 +729,7 @@ void loop(){
 }
 ```
 
-### `CONTINUE`
+### `continue`
 
 Sirve, por ejemplo, para saltar una iteración en un bucle.
 
@@ -753,7 +753,7 @@ void loop(){
 }
 ```
 
-### `RETURN`
+### `return`
 
 Desde donde lo ponga, se vuelve al principio de la función.
 
@@ -781,7 +781,7 @@ void loop(){
 
 ___
 
-## `SWITCH`
+## `switch`
 
 Es un programa secuencial que busca el primer caso a ‘true’ para ejecutarlo y, si no, sigue bajando entre los casos.
 

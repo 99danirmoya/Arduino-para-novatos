@@ -660,7 +660,7 @@ void loop(){
 
 ### BUCLE `do... while`
 
-<img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-22_213407.png" align="right" width="600px"/>
+<img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-22_213407.png" align="right" width="450px"/>
 
 ```c++
 // Declaración de variables
@@ -684,5 +684,124 @@ void loop(){
 
 <br clear="right"/>
 ___
+
+## `BREAK`, `CONTINUE` Y `RETURN`
+
+### `BREAK`
+
+Rompe un bucle cuando se cumple la condición que le imponga. Muy útil para decir cuando un bucle de tipo ‘while(1)’ o ‘while(true)’ deben acabar.
+
+```c++
+// Declaración de variables
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	Serial.begin(115200);
+	int multiplo = 1;
+	while(multiplo <= 10){
+		Serial.println(multiplo*2);
+		multiplo++;
+		if(multiplo==5){
+			Serial.println("ROMPIENDO EL BUCLE...");
+			break;
+		}
+	}
+	Serial.println("Bucle roto con éxito");
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+	
+}
+```
+
+### `CONTINUE`
+
+Sirve, por ejemplo, para saltar una iteración en un bucle.
+
+```c++
+// Declaración de variables
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	Serial.begin(115200);
+	for(int i = 0; i <= 10; i++){
+		if(i == 5 || i == 8){
+			continue;
+		}
+		Serial.println(i);
+	}
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+	
+}
+```
+
+### `RETURN`
+
+Desde donde lo ponga, se vuelve al principio de la función.
+
+```c++
+// Declaración de variables
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	Serial.begin(115200);
+	for(int i = 0; i <= 7; i++){
+		Serial.println(i);
+		return;                    // Debido a que hice un bucle quedebería imprimir 0, 1, 2, ..., 7, pero le dí a 'return' justo en ese momento, volverá a 0
+	}
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+	Serial.println("UNO");
+	Serial.println("DOS");
+	return;                      // Este 'loop()' estará eternamente imprimiendo "UNO", "DOS", "UNO", "DOS", "UNO", ...
+	Serial.println("TRES");
+	Serial.println("CUATRO");
+}
+```
+
+___
+
+## `SWITCH`
+
+Es un programa secuencial que busca el primer caso a ‘true’ para ejecutarlo y, si no, sigue bajando entre los casos.
+
+```c++
+// Declaración de variables
+
+// Código que sólo se ejecuta una única vez
+void setup(){
+	Serial.begin(115200);                   // Inicializo el serial y sus baudios
+	int x = 3;
+
+	switch(x){
+		case 1 ... 10:                      // INTERVALOS, 'x' está comprendida entre esos dos números
+			Serial.println("Halo CE");
+			break;
+		case 11 ... 20:
+			Serial.println("Halo 2");
+			break;
+		case 21 ... 30:
+			Serial.println("Halo 3");
+			// break;                       // Si omito un break y 'x' vale el de su caso, se imprimirán los casos hastas llegar a uno con break
+		case 31 ... 40:
+			Serial.println("Halo 3 ODST");
+			break;
+		case 41 ... 50:
+			Serial.println("Halo Reach");
+			break;
+	}
+}
+
+// Código que se ejecuta infinitamente
+void loop(){
+	
+}
+```
 
 </div>

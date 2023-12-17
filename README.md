@@ -54,28 +54,28 @@ En este apartado mostraré información técnica del microcontrolador [Arduino U
 ### ESQUEMATICO
 
 <div align="center">
-  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-27_182139.png" width="900"  style="margin: 10px;"/>
+  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-27_182139.png" width="700"  style="margin: 10px;"/>
 </div>
 <br/>
 
 ### PCB
 
 <div align="center">
-  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-27_182120.png" width="900"  style="margin: 10px;"/>
+  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-27_182120.png" width="700"  style="margin: 10px;"/>
 </div>
 <br/>
 
 ### MODELO 3D
 
 <div align="center">
-  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-27_182103.png" width="900"  style="margin: 10px;"/>
+  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-27_182103.png" width="700"  style="margin: 10px;"/>
 </div>
 <br/>
 
 ### PINOUT
 
 <div align="center">
-  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-27_182305.png" width="900"  style="margin: 10px;"/>
+  <img src="https://github.com/medialablpwan/arduinoparanovatos/blob/main/pics/Screenshot_2023-09-27_182305.png" width="700"  style="margin: 10px;"/>
 </div>
 <br/>
 
